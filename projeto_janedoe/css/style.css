@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway:400,700&display=swap');
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   font-family: 'Raleway', sans-serif;
   margin: 0;
@@ -108,5 +112,25 @@ section#form-mapa iframe {
 form input[type="text"],
 form textarea {
   width: 100%;
-  margin: 2px 0 10px;
+  padding: 5px;
+}
+
+form .form-group {
+  margin: 0 0 10px;
+}
+
+form textarea {
+  resize: none;
+  height: 100px;
+}
+
+form button {
+  border: none;
+  padding: 5px 20px;
+  background-color: orange;
+  color: white;
+}
+
+.mapa {
+  padding-left: 20px;
 }
