@@ -29,7 +29,7 @@ ul li a {
   color: #555;
 }
 
-main#banner {
+section#banner {
   background-image: url('../img/jane.jpg');
   background-position: center;
   background-repeat: no-repeat;
@@ -66,4 +66,47 @@ main#about p cite {
   font-weight: 700;
   font-style: normal;
   line-height: 40px;
+}
+
+/* home v2 */
+
+section#concept,
+section#songs,
+main#contact {
+  width: 900px;
+  margin: 30px auto;
+}
+
+section#songs img {
+  width: 100%;
+}
+
+.duas-colunas {
+  overflow: hidden;
+}
+
+.duas-colunas>div {
+  width: 50%;
+  float: left;
+}
+
+section#songs ol li {
+  padding: 15px 0;
+}
+
+section#songs ol li strong {
+  color: orange;
+}
+
+/* contact v2 */
+
+section#form-mapa iframe {
+  width: 100%;
+  height: 400px;
+}
+
+form input[type="text"],
+form textarea {
+  width: 100%;
+  margin: 2px 0 10px;
 }
