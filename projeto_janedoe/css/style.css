@@ -79,6 +79,7 @@ main#music,
 section#songs,
 main#contact {
   width: 900px;
+  max-width: 100%;
   margin: 30px auto;
 }
 
@@ -134,4 +135,49 @@ form button {
 
 .mapa {
   padding-left: 20px;
+}
+
+/* posicionamento e responsividade */
+
+@media (max-width: 900px){
+  section#concept,
+  section#songs {
+    padding: 0 40px;
+  }
+
+  nav ul li{
+    font-size: 24px;
+  }
+
+  h2 {
+    font-size: 32px;
+    text-align: center;
+  }
+
+  p{
+    font-size: 18px;
+  }
+}
+
+@media(max-width: 768px){
+  .duas-colunas>div{
+    width: 100%;
+  }
+
+  section#songs ol li {
+    font-size: 24px;
+  }
+
+  main#music{
+    padding: 0 40px;
+  }
+
+  main#music iframe{
+    width: 100%;
+  }
+
+  main#music ul li,
+  main#music p {
+    font-size: 24px;
+  }
 }
