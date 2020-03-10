@@ -21,6 +21,7 @@ header h1 {
 
 nav ul {
   list-style: none;
+  padding: 0;
 }
 
 nav ul li {
@@ -61,6 +62,7 @@ main#about h2 {
 
 main#about img {
   width: 450px;
+  max-width: 100%;
   margin: 20px auto;
 }
 
@@ -180,4 +182,42 @@ form button {
   main#music p {
     font-size: 24px;
   }
+
+  main#contact{
+    padding: 0 40px;
+  }
+
+  main#contact form,
+  main#contact form input,
+  main#contact form textarea{
+    font-size: 24px;
+  }
+
+  main#contact form .form-group{
+    margin-bottom: 20px;
+  }
+
+  main#contact form button{
+    padding: 10px 30px;
+    font-size: 22px;
+  }
+
+  main#contact .mapa{
+    padding: 0;
+    margin: 30px 0;
+  }
+
+}
+
+@media (max-width: 425px){
+  nav ul li{
+    padding: 10px;
+    font-size: 22px;
+  }
+
+  main#about{
+    padding: 0 40px;
+  }
+
+  /* ajusta imagem que está com 540px */
 }
