@@ -6,15 +6,15 @@
       data-ride="carousel"
     >
       <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img src="/imagens/banner.jpg" class="d-block w-100" alt="banner" />
-        </div>
-        <div class="carousel-item">
-          <img src="/imagens/banner.jpg" class="d-block w-100" alt="banner" />
-        </div>
-        <div class="carousel-item">
-          <img src="/imagens/banner.jpg" class="d-block w-100" alt="banner" />
-        </div>
+        <% for(let i = 0; i < listaBanners.length; i++) { %>
+          <% if(i == 0) { %>
+          <div class="carousel-item active">
+            <% } else { %>
+            <div class="carousel-item">
+            <% } %>
+            <img src="<%= listaBanners[i] %>" class="d-block w-100" alt="banner" />
+          </div>
+        <% } %>
       </div>
       <a
         class="carousel-control-prev"

@@ -8,7 +8,14 @@ const homeController = {
       {nome: 'Data Science', imagem: '/imagens/undraw_mobile_apps.svg'},
     ];
 
-    res.render('index', { title: 'Home', listaServicos: servicos });
+    let banners = [
+      '/imagens/banner2.jpg',
+      '/imagens/banner3.jpg',
+      '/imagens/banner4.jpg',
+      '/imagens/banner.jpg',
+    ];
+
+    res.render('index', { title: 'Home', listaServicos: servicos, listaBanners: banners });
   }
 };
 
