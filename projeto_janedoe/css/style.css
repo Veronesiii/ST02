@@ -156,6 +156,55 @@ main#music {
   margin-top: 135px;
 }
 
+/* Flexbox */
+.mini-banner{
+  display: flex;
+  width: 100%;
+  height: 300px;
+  background-color: #ccc;
+  color: white;
+  justify-content: center;
+  align-items: center;
+}
+
+.mini-banner h2 {
+  text-transform: uppercase;
+  font-size: 30px;
+  letter-spacing: 10px;
+}
+
+.posts{
+  width: 900px;
+  max-width: 100%;
+  min-height: 400px;
+  display: flex;
+  /* border: solid 1px #ccc; */
+  justify-content: space-around;
+  margin: 30px auto;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.posts article {
+  border: solid 1px #ccc;
+  padding: 15px;
+  width: 250px;
+  min-height: 300px;
+  margin: 20px 0;
+}
+
+.posts article h1 {
+  text-transform: uppercase;
+}
+
+.posts article .poster{
+  background-image: url("../img/jane2.jpg");
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 150px;
+}
+
 /* posicionamento e responsividade */
 
 @media (max-width: 900px){

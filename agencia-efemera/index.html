@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Agência Efêmera</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/estilo.css" />
+    <link rel="shortcut icon" href="imagens/favicon.png" type="image/x-icon" />
+  </head>
+
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">
+          <img src="imagens/efêmera-logo.png" alt="Agência Efêmera" />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Serviços</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Quem Somos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contato</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <section id="banner">
+      <div
+        id="carouselExampleControls"
+        class="carousel slide"
+        data-ride="carousel"
+      >
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="imagens/banner.jpg" class="d-block w-100" alt="banner" />
+          </div>
+          <div class="carousel-item">
+            <img src="imagens/banner.jpg" class="d-block w-100" alt="banner" />
+          </div>
+          <div class="carousel-item">
+            <img src="imagens/banner.jpg" class="d-block w-100" alt="banner" />
+          </div>
+        </div>
+        <a
+          class="carousel-control-prev"
+          href="#carouselExampleControls"
+          role="button"
+          data-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a
+          class="carousel-control-next"
+          href="#carouselExampleControls"
+          role="button"
+          data-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+    </section>
+
+    <section id="servicos" class="py-5 mb-5">
+      <div class="container">
+        <div class="row">
+          <div class="col text-center pb-5">
+            <h2>Serviços</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div
+            class="col-md-4 text-center card d-flex justify-content-around p-5"
+          >
+            <img src="imagens/undraw_dev_focus.svg" class="img-fluid" />
+            <h3>Desenvolvimento Web</h3>
+          </div>
+          <div
+            class="col-md-4 text-center card d-flex justify-content-around p-5"
+          >
+            <img src="imagens/undraw_social_dashboard.svg" class="img-fluid" />
+            <h3>Marketing Digital</h3>
+          </div>
+          <div
+            class="col-md-4 text-center card d-flex justify-content-around p-5"
+          >
+            <img src="imagens/undraw_mobile_apps.svg" class="img-fluid" />
+            <h3>Consultoria UX</h3>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="quem-somos" class="py-5 mb-5 bg-light">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 py-5">
+            <img src="imagens/undraw_team_spirit.svg" class="img-fluid" />
+          </div>
+          <div class="col-md-6 py-5">
+            <h2 class="mt-5 pt-5">Quem somos</h2>
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veniam
+              eaque, consequatur officia tempora quia harum temporibus
+              voluptatem atque aliquid. Adipisci, debitis tempore optio omnis
+              expedita nisi quam molestias laudantium reiciendis.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="contato">
+      <div class="container py-5">
+        <div class="row">
+          <div class="col-md-6">
+            <form>
+              <h2>Contato</h2>
+
+              <div class="form-group">
+                <label for="nome">Nome</label>
+                <input type="text" name="nome" id="nome" class="form-control" />
+              </div>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input
+                  type="text"
+                  name="email"
+                  id="email"
+                  class="form-control"
+                />
+              </div>
+              <div class="form-group">
+                <label for="mensagem">Mensagem</label>
+                <textarea
+                  name="mensagem"
+                  id="mensagem"
+                  class="form-control"
+                  rows="5"
+                ></textarea>
+              </div>
+              <button class="btn btn-primary">Enviar</button>
+            </form>
+          </div>
+          <div class="col-md-6 pt-5">
+            <p class="pt-4"><strong>telefone</strong> 11 5662-9989</p>
+            <p><strong>whatsapp</strong> 11 98484-1919</p>
+            <p><strong>endereço</strong> Av cardoso de melo, 90</p>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14624.204917821902!2d-46.6752568!3d-23.6024956!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x739f0ddb0439cf94!2sDigital%20House%20S%C3%A3o%20Paulo!5e0!3m2!1spt-BR!2sbr!4v1573327818692!5m2!1spt-BR!2sbr"
+              width="100%"
+              height="250"
+              frameborder="0"
+              allowfullscreen=""
+            ></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="py-3 bg-light">
+      <div class="container text-center">
+        <p class="m-0">
+          copyright 2019
+          <img src="imagens/favicon.png" width="30" alt="" /> agência efêmera
+        </p>
+      </div>
+    </footer>
+
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
