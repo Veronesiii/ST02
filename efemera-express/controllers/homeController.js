@@ -22,6 +22,15 @@ const homeController = {
 
     res.render('contato', {nome,email,mensagem});
 
+  },
+  newsletter: (req, res) => {
+    let {email} = req.query;
+    
+    // POST - req.body
+    // GET - req.query
+    // GET /:email - req.params
+
+    res.render('newsletter', {email, title: 'Newsletter'});
   }
 };
 
