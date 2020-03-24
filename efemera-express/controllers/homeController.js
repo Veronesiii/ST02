@@ -16,6 +16,12 @@ const homeController = {
     ];
 
     res.render('index', { title: 'Home', listaServicos: servicos, listaBanners: banners });
+  },
+  contato: (req,res)=>{
+    let {nome, email, mensagem} =  req.body;
+
+    res.render('contato', {nome,email,mensagem});
+
   }
 };
 
