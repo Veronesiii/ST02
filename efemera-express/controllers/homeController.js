@@ -20,7 +20,7 @@ const homeController = {
 
     res.render('index', { title: 'Home', listaServicos: servicos, listaBanners: banners });
   },
-  contato: (req,res)=>{
+  contato: (req,res) => {
 
     let {nome, email, mensagem} =  req.body;
     // novo conteudo
@@ -48,10 +48,20 @@ const homeController = {
   },
   newsletter: (req, res) => {
     let {email} = req.query;
+
+    const fileNewsletter = path.join("db", "newsletter.json");
+
+    let listaNewsletter = [];
+
+    if (fs.existsSync(fileNewsletter)) {
+      listaNewsletter = fs.readFileSync(fileNewsletter, {encoding: "utf-8"});
+      listaNewsletter = JSON.parse(listaNewsletter);
+    }
     
-    // POST - req.body
-    // GET - req.query
-    // GET /:email - req.params
+    listaNewsletter.push({email, timestamp: new Date()});
+    listaNewsletter = JSON.stringify(listaNewsletter);
+    fs.writeFileSync(fileNewsletter, listaNewsletter);
+
 
     res.render('newsletter', {email, title: 'Newsletter'});
   }
