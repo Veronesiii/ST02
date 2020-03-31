@@ -21,17 +21,30 @@ const homeController = {
     res.render('index', { title: 'Home', listaServicos: servicos, listaBanners: banners });
   },
   contato: (req,res)=>{
-    let {nome, email, mensagem} =  req.body;
 
-    // conteudo do arquivo
+    let {nome, email, mensagem} =  req.body;
+    // novo conteudo
     let infoContato = { nome, email, mensagem };
-    let infoContatoJSON = JSON.stringify(infoContato);
     // caminho e nome do arquivo
     let fileContato = path.join('db', 'contatos.json');
-    // cria arquivo e guarda conteudo 
-    fs.writeFileSync(fileContato, infoContatoJSON);
+    
+    let listaContato = [];
 
-    res.render('contato', {nome,email,mensagem, title: 'Contato'});
+    if (fs.existsSync(fileContato)){
+      // trazer informações do arquivo
+      listaContato = fs.readFileSync(fileContato, {encoding: 'utf-8'});
+      listaContato = JSON.parse(listaContato);
+    }
+    
+    //cria um array com uma posição
+    listaContato.push(infoContato);
+    //converter conteudo para json
+    listaContato = JSON.stringify(listaContato);
+    //salva informações no arquivo
+    fs.writeFileSync(fileContato, listaContato);
+
+    res.render('contato', {nome, email, title: 'Contato'});
+
   },
   newsletter: (req, res) => {
     let {email} = req.query;
