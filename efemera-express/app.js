@@ -39,7 +39,7 @@ app.use(function(err, req, res, next) {
 
   // render the error page
   res.status(err.status || 500);
-  res.render('erro', {title: 'Erro de servidor'});
+  // res.render('erro', {title: 'Erro de servidor'});
 });
 
 module.exports = app;

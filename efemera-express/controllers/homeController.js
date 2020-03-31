@@ -1,3 +1,6 @@
+const path = require('path');
+const fs = require('fs');
+
 const homeController = {
   index: (req, res) => {
     let servicos = [
@@ -20,8 +23,15 @@ const homeController = {
   contato: (req,res)=>{
     let {nome, email, mensagem} =  req.body;
 
-    res.render('contato', {nome,email,mensagem});
+    // conteudo do arquivo
+    let infoContato = { nome, email, mensagem };
+    let infoContatoJSON = JSON.stringify(infoContato);
+    // caminho e nome do arquivo
+    let fileContato = path.join('db', 'contatos.json');
+    // cria arquivo e guarda conteudo 
+    fs.writeFileSync(fileContato, infoContatoJSON);
 
+    res.render('contato', {nome,email,mensagem, title: 'Contato'});
   },
   newsletter: (req, res) => {
     let {email} = req.query;
