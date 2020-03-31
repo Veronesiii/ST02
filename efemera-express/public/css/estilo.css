@@ -27,8 +27,10 @@ h2,
 h3,
 h4 {
     text-transform: uppercase;
-    color: #FFA000;
+}
+h1{
 
+    color: #FFA000;
 }
 
 h3 {

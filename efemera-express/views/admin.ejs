@@ -1,0 +1,68 @@
+<%- include('./partials/header') %>
+<main class="container py-5 my-5">
+
+  <h1>Painel de controle</h1>
+  <hr class="my-5">
+  <section>
+    <h3 class="mb-3" >Newsletter</h3>
+    <table class="table table-striped">
+      <thead>
+        <tr class="row">
+          <th class="col">email</th>
+          <th class="col">data</th>
+          <th class="col-2">ações</th>
+        </tr>
+      </thead>
+     <tbody>
+      <% for(inscrito of listaNewsletter) { %>
+        <tr class="row">
+          <td class="col">
+            <%= inscrito.email %>
+          </td>
+          <td class="col">
+            <%= inscrito.timestamp %>
+          </td>
+          <td class="col-2">
+            <a href="#" class="btn btn-warning">editar</a>
+            <a href="#" class="btn btn-danger">excluir</a>
+          </td>
+        </tr>
+      <%  } %>
+     </tbody>
+    </table>
+  </section>
+  <section class="py-5">
+    <h3 class="mb-3" >Contato</h3>
+    <table class="table table-striped">
+      <thead>
+        <tr class="row text-left">
+          <th class="col">nome</th>
+          <th class="col">email</th>
+          <th class="col">mensagem</th>
+          <th class="col-2">ações</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% for(contato of listaContato) { %>
+          <tr class="row">
+            <td class="col">
+              <%= contato.nome %>
+            </td>
+            <td class="col">
+              <a href="mailto:<%= contato.email %>"><%= contato.email %></a>
+            </td>
+            <td class="col">
+              <%= contato.mensagem %>
+            </td>
+            <td class="col-2">
+              <a href="#" class="btn btn-warning">editar</a>
+              <a href="#" class="btn btn-danger">excluir</a>
+            </td>
+          </tr>
+        <%  } %>
+      </tbody>
+    </table>
+  </section>
+
+</main>
+<%- include('./partials/footer') %>
